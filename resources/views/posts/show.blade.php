@@ -11,7 +11,7 @@
                 <div class="flex items-center lg:justify-center text-sm mt-4">
                     <img src="/images/lary-avatar.svg" alt="Lary avatar">
                     <div class="ml-3 text-left">
-                        <h5 class="font-bold">{{$post->author->name}}</h5>
+                        <h5 class="font-bold">{{$post->author->name??''}}</h5>
                     </div>
                 </div>
             </div>
@@ -36,7 +36,7 @@
                     <div class="space-x-2">
                         <a href="#"
                            class="px-3 py-1 border border-blue-300 rounded-full text-blue-300 text-xs uppercase font-semibold"
-                           style="font-size: 10px">{{$post->category->name}}</a>
+                           style="font-size: 10px">{{$post->category->name??''}}</a>
                     </div>
                 </div>
 
@@ -46,7 +46,7 @@
 
                 <div class="space-y-4 lg:text-lg leading-loose">
                     <p>
-                        {{$post->body ?? ''}}
+                        {!! $post->body ?? '' !!}
                     </p>
                 </div>
             </div>
